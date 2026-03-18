@@ -29,6 +29,15 @@ class Freeguardvpn < Formula
 
   def install
     bin.install "freeguard"
+
+    # Install bundled dependencies (mihomo + GeoIP)
+    freeguard_dir = "#{Dir.home}/.freeguard"
+    if File.directory?(".freeguard")
+      mkdir_p "#{freeguard_dir}/bin"
+      cp ".freeguard/bin/mihomo", "#{freeguard_dir}/bin/mihomo" if File.exist?(".freeguard/bin/mihomo")
+      chmod 0755, "#{freeguard_dir}/bin/mihomo" if File.exist?("#{freeguard_dir}/bin/mihomo")
+      cp ".freeguard/geoip.metadb", "#{freeguard_dir}/geoip.metadb" if File.exist?(".freeguard/geoip.metadb")
+    end
   end
 
   test do

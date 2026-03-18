@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-class Freeguard < Formula
+class Freeguardvpn < Formula
   desc "Command-line VPN client powered by mihomo core"
   homepage "https://freeguardvpn.com"
   version "0.1.0"

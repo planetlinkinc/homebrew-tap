@@ -4,26 +4,26 @@
 class Freeguardvpn < Formula
   desc "Command-line VPN client powered by mihomo core"
   homepage "https://freeguardvpn.com"
-  version "0.2.0"
+  version "0.8.1"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://downloadcli.freeguardvpn.com/cli/v#{version}/freeguard-cli_#{version}_darwin_arm64.tar.gz"
-      sha256 "f2dc8ac80345cd8bdacc0b15f9f74d7888332a44b664eb5e0d5632dfa69c375a"
+      url "https://github.com/planetlinkinc/freeguard-releases/releases/download/v#{version}/freeguard-darwin-arm64.tar.gz"
+      sha256 "0b746d439728885349b8a3f55da3354e861e33e4ce0659ac5f387916d4fd5a5f"
     else
-      url "https://downloadcli.freeguardvpn.com/cli/v#{version}/freeguard-cli_#{version}_darwin_amd64.tar.gz"
-      sha256 "75478360c5b7232a53fa52ea3b21f8868518b7316cd4214efc3eeb1edba222c0"
+      url "https://github.com/planetlinkinc/freeguard-releases/releases/download/v#{version}/freeguard-darwin-amd64.tar.gz"
+      sha256 "75c783d0de3801cb9814179b6ef39a46b0768c5503275aff8ec6289509f57057"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://downloadcli.freeguardvpn.com/cli/v#{version}/freeguard-cli_#{version}_linux_arm64.tar.gz"
-      sha256 "c835a5add4a106af4a194ca68037af7ea04dabeee8014999da65858c6e08f1e9"
+      url "https://github.com/planetlinkinc/freeguard-releases/releases/download/v#{version}/freeguard-linux-arm64.tar.gz"
+      sha256 "3397e56f48efdc1f1e797f340893d04e9e43ffd44db3710d8625cfa44642676a"
     else
-      url "https://downloadcli.freeguardvpn.com/cli/v#{version}/freeguard-cli_#{version}_linux_amd64.tar.gz"
-      sha256 "f0768a44555c5a95e4b23de07a962c4fe508e4149918d998cf70ce91b4302c9e"
+      url "https://github.com/planetlinkinc/freeguard-releases/releases/download/v#{version}/freeguard-linux-amd64.tar.gz"
+      sha256 "e0d6ce5cc83c3fc34ce49036e3e24722d6d5a64d1726da10bcfea027b8c15b84"
     end
   end
 
